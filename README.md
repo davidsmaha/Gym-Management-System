@@ -8,7 +8,21 @@ A backend API for managing gym members, trainers, schedules, and exercises, buil
 - Exercise tracking
 - Status updates for members
 - CRUD operations for all entities
+  
+## Authentication Design
+The system supports two distinct user roles with separate authentication logic:
 
+### Member Authentication
+- Credentials are validated against the `member` table
+- Members can only access their own schedules and assigned exercises
+- Access is restricted based on the authenticated member ID
+
+### Trainer Authentication
+- Credentials are validated against the `trainer` table
+- Trainers have administrative privileges
+- Trainers can manage members, trainers, exercises, and schedules
+
+The backend dynamically determines which database table to query based on the selected login type, ensuring proper role-based access control.
 ## Tech Stack
 - Java Spring Boot
 - MySQL / MariaDB
