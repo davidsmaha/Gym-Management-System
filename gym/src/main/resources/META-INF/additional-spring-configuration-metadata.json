@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "moobitek.datasource.external",
+      "type": "java.lang.String",
+      "description": "Description for moobitek.datasource.external."
+    },
+    {
+      "name": "moobitek.datasource.username",
+      "type": "java.lang.String",
+      "description": "Description for moobitek.datasource.username."
+    }
+  ] }
